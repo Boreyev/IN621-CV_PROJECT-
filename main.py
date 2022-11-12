@@ -1,5 +1,5 @@
 from cv2 import cv2
-from gpiozero import Servo
+from gpiozero import Angular Servo
 from time import sleep
 
 servo = Angular Servo(17, min_angle=-90, max_angle=90)
