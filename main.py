@@ -1,5 +1,5 @@
 from cv2 import cv2
-from gpiozero import Servoimport time
+from gpiozero import Servo
 from time import sleep
 
 servo = Servo(17)
