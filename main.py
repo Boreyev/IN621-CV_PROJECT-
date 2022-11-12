@@ -1,8 +1,8 @@
 from cv2 import cv2
-from gpiozero import Angular Servo
+from gpiozero import AngularServo
 from time import sleep
 
-servo = Angular Servo(17, min_angle=-90, max_angle=90)
+servo = AngularServo(17, min_angle=-90, max_angle=90)
 
 def turnRight():    #Turn right when deviated from center. 
     servo.angle = -90
