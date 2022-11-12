@@ -1,7 +1,11 @@
 from cv2 import cv2
+from gpiozero import Servoimport time
+from time import sleep
 
+servo = Servo(17)
 
 def turnRight():    #Turn right when deviated from center. 
+    servo.max()
     print("Turn Right")
 
 def turnLeft():     #Turn right when deviated from center. 
