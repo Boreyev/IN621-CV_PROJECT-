@@ -38,11 +38,11 @@ while True:
         hori = (x * 0.6 -90)
         verti = (y * 1.2 -90)
 
-        print("horizontal angle", x * 0.3 - 90)
+        print("horizontal angle", (x * 0.3) - 90)
         print("vertical angle", (y * 1.2) - 90)
 
-        hori_servo.angle = (hori)   # Map face coordinates to servo angle. 
-        verti_servo.angle = (verti)   # Example: X coordinate of 200 is equal to an angle of -60 degrees. 
+        hori_servo.angle = (int(hori))   # Map face coordinates to servo angle. 
+        verti_servo.angle = (int(verti))   # Example: X coordinate of 200 is equal to an angle of -60 degrees. 
         
 
 
