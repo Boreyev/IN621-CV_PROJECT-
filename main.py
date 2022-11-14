@@ -24,7 +24,7 @@ while True:
 
         hori = x
         verti = y
-        print("raw y ", verti)
+        print("raw x ", hori)
 
         if hori > 600: 
             print("exceeded!")
