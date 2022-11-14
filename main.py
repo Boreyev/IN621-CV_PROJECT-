@@ -23,7 +23,8 @@ while True:
         cv2.putText(img, xString + ", " + yString, (20,20), font, 0.7, (204, 204, 204), 1)  #Displays current coords (For visual testing).
 
         hori = x
-        print("raw y ", verti = y)
+        verti = y
+        print("raw y ", verti)
 
         if hori > 300: 
             hori = 300
