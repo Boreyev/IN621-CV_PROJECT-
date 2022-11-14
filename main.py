@@ -2,14 +2,14 @@ from cv2 import cv2
 from gpiozero import AngularServo
 
 hori_servo = AngularServo(17, min_angle=-90, max_angle=90)  # Initialize horizontal axis servo to GPIO pin 17. Movement is 180 degrees from -90 - 90.
-# verti_servo = AngularServo(18, min_angle=-90, max_angle=90) # Initialize vertical axis servo to GPIO pin 18. 
+verti_servo = AngularServo(18, min_angle=-90, max_angle=90) # Initialize vertical axis servo to GPIO pin 18. 
 
 font = cv2.FONT_HERSHEY_SIMPLEX #Universal font
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml') # Load the cascade
 
 cap = cv2.VideoCapture(0)               # To capture video from webcam.
-cap.set(cv2.CAP_PROP_FRAME_WIDTH, 300)  # Set frame width to 300 for universal camera use and performance.
-cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 150) # Set frame height to 150.
+cap.set(cv2.CAP_PROP_FRAME_WIDTH, 600)  # Set frame width to 300 for universal camera use and performance.
+cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 300) # Set frame height to 150.
 
 while True:
     ret, img = cap.read()                           # Read the frame
@@ -38,11 +38,11 @@ while True:
         hori = (x * 0.6 -90)
         verti = (y * 1.2 -90)
 
-        print("horizontal angle", int((x * 0.3) - 90))
-        print("vertical angle", int((y * 1.2) - 90))
+        print("horizontal angle", int((x * 0.6) - 90))
+        print("vertical angle", int((y * 0.3) - 90))
 
         hori_servo.angle = (int(hori))   # Map face coordinates to servo angle. 
-        # verti_servo.angle = (int(verti))   # Example: X coordinate of 200 is equal to an angle of -60 degrees. 
+        verti_servo.angle = (int(verti))   # Example: X coordinate of 200 is equal to an angle of -60 degrees. 
         
 
 
