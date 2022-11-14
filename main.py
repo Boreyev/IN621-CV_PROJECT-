@@ -23,7 +23,7 @@ while True:
         cv2.putText(img, xString + ", " + yString, (20,20), font, 0.7, (204, 204, 204), 1)  #Displays current coords (For visual testing).
 
         hori = x
-        verti = y
+        print("raw y ", verti = y)
 
         if hori > 300: 
             hori = 300
@@ -38,7 +38,7 @@ while True:
         verti = (y * 1.2 -90)
 
         print("horizontal angle", x * 0.3 - 90)
-        print("vertical angle", y * 1.2 - 90)
+        print("vertical angle", (y * 1.2) - 90)
 
         hori_servo.angle = (hori)   # Map face coordinates to servo angle. 
         verti_servo.angle = (verti)   # Example: X coordinate of 200 is equal to an angle of -60 degrees. 
