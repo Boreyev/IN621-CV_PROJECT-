@@ -37,7 +37,7 @@ while True:
             verti = 0
 
         hori = (x * 0.6 -90)
-        verti = (y * 1.2 -90)
+        verti = (y * 0.3 -90)
 
         print("horizontal angle", int((x * 0.6) - 90))
         print("vertical angle", int((y * 0.3) - 90))
