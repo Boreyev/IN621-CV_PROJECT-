@@ -1,8 +1,8 @@
 from cv2 import cv2
 from gpiozero import AngularServo
 
-hori_servo = AngularServo(17, min_angle=-90, max_angle=90)  # Initialize horizontal axis servo to GPIO pin 17. Movement is 180 degrees from -90 - 90.
-verti_servo = AngularServo(18, min_angle=-90, max_angle=90) # Initialize vertical axis servo to GPIO pin 18. 
+hori_servo = AngularServo(17, min_angle=-180, max_angle=180)  # Initialize horizontal axis servo to GPIO pin 17. Movement is 180 degrees from -90 - 90.
+verti_servo = AngularServo(18, min_angle=-180, max_angle=180) # Initialize vertical axis servo to GPIO pin 18. 
 
 font = cv2.FONT_HERSHEY_SIMPLEX #Universal font
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml') # Load the cascade
