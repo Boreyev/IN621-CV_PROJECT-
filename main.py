@@ -26,12 +26,13 @@ while True:
         verti = y
         print("raw y ", verti)
 
-        if hori > 300: 
-            hori = 300
+        if hori > 600: 
+            print("exceeded!")
+            hori = 600
         elif hori < 0:
             hori = 0
-        if verti > 150:
-            verti = 150
+        if verti > 300:
+            verti = 300
         elif verti < 0:
             verti = 0
 
