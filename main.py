@@ -10,13 +10,14 @@ face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml') # Lo
 cap = cv2.VideoCapture(0)               # To capture video from webcam.
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 300)  # Set frame width to 300 for universal camera use and performance.
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 150) # Set frame height to 150.
+x_array = []
+y_array = []
 
 while True:
     ret, img = cap.read()                           # Read the frame
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)    # Convert to grayscale
     faces = face_cascade.detectMultiScale(gray, 1.1, 4)    
-    x_array = []
-    y_array = []
+    
 
    for (x, y, w, h) in faces:                      
        # Get coordinates from detected face. 
