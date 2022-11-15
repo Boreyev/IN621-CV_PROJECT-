@@ -16,11 +16,10 @@ y_array = []
 while True:
     ret, img = cap.read()                           # Read the frame
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)    # Convert to grayscale
-    faces = face_cascade.detectMultiScale(gray, 1.1, minNeighbors=10, 10, minSize=(64,64))    
-    
+    faces = face_cascade.detectMultiScale(gray, 1.1, minNeighbors=10, minSize=(64,64))    
 
     for (x, y, w, h) in faces:                      
-       # Get coordinates from detected face. 
+        # Get coordinates from detected face. 
         cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
         xString = str(x)
         yString = str(y)
