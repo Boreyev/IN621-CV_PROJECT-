@@ -15,12 +15,14 @@ while True:
     ret, img = cap.read()                           # Read the frame
     gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)    # Convert to grayscale
     faces = face_cascade.detectMultiScale(gray, 1.1, 4)    
+    x_array = []
+    y_array = []
 
-    for (x, y, w, h) in faces:                      # Get coordinates from detected face. 
+   for (x, y, w, h) in faces:                      # Get coordinates from detected face. 
         cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
         xString = str(x)
         yString = str(y)
-        cv2.putText(img, xString + ", " + yString, (20,20), font, 0.7, (204, 204, 204), 1)  #Displays current coords (For visual testing).
+        # cv2.putText(img, xString + ", " + yString, (20,20), font, 0.7, (204, 204, 204), 1)  #Displays current coords (For visual testing).
 
         hori = x
         verti = y
@@ -42,12 +44,15 @@ while True:
         print("horizontal angle", int((x * 0.3) - 90))
         print("vertical angle", int((y * 0.6) - 90))
 
+        x_array.push(hori)
+        y_array.push(verti)
+
         hori_servo.angle = (int(hori))   # Map face coordinates to servo angle. 
         verti_servo.angle = (int(verti))   # Example: X coordinate of 200 is equal to an angle of -60 degrees. 
         
 
 
-    cv2.imshow('img', img)
+    # cv2.imshow('img', img)
     # Stop if escape key is pressed
     k = cv2.waitKey(30) & 0xff
     if k==27:
