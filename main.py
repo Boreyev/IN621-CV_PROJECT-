@@ -18,11 +18,13 @@ while True:
     x_array = []
     y_array = []
 
-   for (x, y, w, h) in faces:                      # Get coordinates from detected face. 
+   for (x, y, w, h) in faces:                      
+       # Get coordinates from detected face. 
         cv2.rectangle(img, (x, y), (x+w, y+h), (255, 0, 0), 2)
         xString = str(x)
         yString = str(y)
-        # cv2.putText(img, xString + ", " + yString, (20,20), font, 0.7, (204, 204, 204), 1)  #Displays current coords (For visual testing).
+        # cv2.putText(img, xString + ", " + yString, (20,20), font, 0.7, (204, 204, 204), 1)  
+        #Displays current coords (For visual testing).
 
         hori = x
         verti = y
