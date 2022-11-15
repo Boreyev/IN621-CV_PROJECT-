@@ -30,15 +30,15 @@ while True:
         verti = y
         print("raw x ", hori)
 
-        if hori > 300: 
-            print("exceeded!")
-            hori = 300
-        elif hori < 0:
-            hori = 0
-        if verti > 150:
-            verti = 150
-        elif verti < 0:
-            verti = 0
+        # if hori > 300: 
+        #     print("exceeded!")
+        #     hori = 300
+        # elif hori < 0:
+        #     hori = 0
+        # if verti > 150:
+        #     verti = 150
+        # elif verti < 0:
+        #     verti = 0
 
         hori = (x * 0.6 -90)
         verti = (y * 1.2 -90)
